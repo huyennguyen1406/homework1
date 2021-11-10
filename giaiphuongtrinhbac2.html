@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 2</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('Nhap so thu nhat: ');
+    let number2 = +prompt('Nhap so thu hai: ');
+    let number3 = +prompt('Nhap so thu ba: ');
+    let delta = (number2 ** 2) - (4 * number1 * number3);
+    if (number1 === 0) {
+        if (number2 === 0) {
+            if (number3 === 0){
+            } else {
+                alert('Phuong trinh vo so nghiem');
+            } else {
+                alert('Phuong trinh vo nghiem');
+            }
+        } else {
+            let x = - (number3 / number2).toFixed(4);
+            alert('Phuong trinh co nghiem la: ' + x);
+        }
+    }
+    else if (delta > 0) {
+        let x1 = ((- number2 + Math.sqrt(delta)) / (2 * number1)).toFixed(4);
+        let x2 = ((- number2 - Math.sqrt(delta)) / (2 * number1)).toFixed(4);
+        alert('Phuong trinh co 2 nghiem la: ' + x1 + 'va' + x2);
+    }
+    else if (delta === 0) {
+        let x = ((- number2) / (2 * number1)).toFixed(4);
+        alert('Phuong trinh co nghiem kep la: ' + x);
+    } else {
+        alert('Phuong trinh vo nghiem');
+    }
+</script>
+</body>
+</html>
